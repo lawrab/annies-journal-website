@@ -1,16 +1,159 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Annie's Journal - Your Daily Health Companion">
+  <Header />
+
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-primary-50 to-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            Your voice.
+            <span class="text-primary-600">Your health.</span>
+            Your journal.
+          </h1>
+          <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+            Track symptoms naturally with voice check-ins. Spot patterns over time. Walk into doctor appointments prepared.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://app.anniesjournal.com"
+              class="px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-colors text-lg shadow-lg shadow-primary-600/25"
+            >
+              Start Your Journal
+            </a>
+            <a
+              href="/how-it-works"
+              class="px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors text-lg border border-gray-200"
+            >
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Tracking symptoms shouldn't be a chore
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Paper journals get lost. Rigid apps feel like work. And when you finally see your doctor, you can't remember the details.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Hard to remember</h3>
+            <p class="text-gray-600">"When did that headache start? Was it before or after the stress?"</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Tedious forms</h3>
+            <p class="text-gray-600">Endless dropdowns and checkboxes that don't capture how you actually feel.</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Unprepared for appointments</h3>
+            <p class="text-gray-600">Walk into the doctor's office and forget everything you meant to say.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Just talk. We'll handle the rest.
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Record a quick voice check-in. Our AI extracts symptoms, severity, and triggers automatically.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-sm">
+            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Voice Check-ins</h3>
+            <p class="text-gray-600">
+              Speak naturally about how you're feeling. "I woke up with a headache again, maybe a 6 out of 10..."
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-sm">
+            <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Pattern Recognition</h3>
+            <p class="text-gray-600">
+              See correlations between your activities and symptoms. Discover what triggers your worst days.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-sm">
+            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Doctor Reports</h3>
+            <p class="text-gray-600">
+              Generate clear summaries for medical appointments. Show your doctor exactly what's been happening.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+          Ready to take control of your health?
+        </h2>
+        <p class="text-xl text-primary-100 mb-10 max-w-2xl mx-auto">
+          Start tracking your symptoms today. It's free, private, and takes just 30 seconds a day.
+        </p>
+        <a
+          href="https://app.anniesjournal.com"
+          class="inline-flex px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-primary-50 transition-colors text-lg"
+        >
+          Start Your Journal - It's Free
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
