@@ -12,6 +12,10 @@ import Footer from '../components/Footer.astro';
     <section class="relative overflow-hidden bg-gradient-to-b from-cream to-cream-dark">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-sage/10 border border-sage/30 rounded-full mb-6">
+            <span class="w-2 h-2 bg-sage rounded-full animate-pulse"></span>
+            <span class="text-sm font-medium text-sage">Currently in Alpha — Free to use</span>
+          </div>
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-walnut leading-tight">
             Some days are harder to explain than others.
           </h1>
@@ -108,8 +112,109 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- Personal Story Section -->
+    <!-- Roadmap Section -->
     <section class="py-20 sm:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p class="text-sm font-medium text-sage uppercase tracking-wider mb-4">
+            Roadmap
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-walnut">
+            What we're building
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Now -->
+          <div class="card border-2 border-sage/30">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-2 h-2 bg-sage rounded-full"></span>
+              <span class="text-sm font-semibold text-sage uppercase tracking-wider">Now</span>
+            </div>
+            <h3 class="text-xl font-semibold text-walnut mb-3">Alpha Release</h3>
+            <ul class="space-y-2 text-walnut-muted">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                <span>Voice check-ins</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                <span>Symptom tracking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                <span>Pattern insights</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                <span>Appointment summaries</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                <span>Passwordless login</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Up Next -->
+          <div class="card">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-2 h-2 bg-terracotta rounded-full"></span>
+              <span class="text-sm font-semibold text-terracotta uppercase tracking-wider">Up Next</span>
+            </div>
+            <h3 class="text-xl font-semibold text-walnut mb-3">Easier Access</h3>
+            <ul class="space-y-2 text-walnut-muted">
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Mobile optimizations</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Edit past check-ins</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Offline mode</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Search & filter</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Later -->
+          <div class="card">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-2 h-2 bg-walnut-muted rounded-full"></span>
+              <span class="text-sm font-semibold text-walnut-muted uppercase tracking-wider">Later</span>
+            </div>
+            <h3 class="text-xl font-semibold text-walnut mb-3">More Power</h3>
+            <ul class="space-y-2 text-walnut-muted">
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Weekly email digest</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Doctor sharing links</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Medication tracking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-4 h-4 mt-1 flex-shrink-0 text-center text-xs">○</span>
+                <span>Wearable integrations</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Story Section -->
+    <section class="py-20 sm:py-24 bg-mist/40">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-sm font-medium text-sage uppercase tracking-wider mb-4">
           Built for Annie, shared with you
@@ -130,7 +235,7 @@ import Footer from '../components/Footer.astro';
           Ready to start tracking?
         </h2>
         <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-          It's free, private, and takes just 30 seconds a day. Your health story deserves to be heard.
+          Free during alpha, private, and takes just 30 seconds a day. Your health story deserves to be heard.
         </p>
         <a
           href="https://app.anniesjournal.com"
