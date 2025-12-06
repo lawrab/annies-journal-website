@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="About - Annie's Journal"
+  description="The story behind Annie's Journal - built for one person's health journey, now shared with anyone who needs it."
+>
+  <Header />
+
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-cream to-cream-dark">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <div class="text-center">
+          <p class="text-sm font-medium text-sage uppercase tracking-wider mb-4">
+            Our Story
+          </p>
+          <h1 class="text-4xl sm:text-5xl font-bold text-walnut leading-tight">
+            Built for Annie.
+          </h1>
+          <p class="mt-4 text-xl text-walnut-muted">
+            Shared with you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Story Section -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose-walnut space-y-8">
+          <p class="text-xl sm:text-2xl text-walnut leading-relaxed">
+            Annie started getting pain in her hands in March. By April she couldn't grip anything. By summer she needed a wheelchair to leave the house, and I was lifting her out of bed every morning.
+          </p>
+
+          <p class="text-xl text-walnut-muted leading-relaxed">
+            We're still waiting for a diagnosis.
+          </p>
+
+          <div class="my-12 py-8 px-6 bg-mist/40 rounded-2xl">
+            <p class="text-lg text-walnut leading-relaxed italic">
+              "If you've been through this, you know how it goes. You wait weeks for an appointment. You get 15 minutes with a consultant. You try to explain months of symptoms while your brain fog makes it hard to remember what happened yesterday. Then you wait again."
+            </p>
+          </div>
+
+          <p class="text-lg text-walnut leading-relaxed">
+            I started going to every appointment with her. Taking notes. Keeping a timeline. Pulling together test results from different hospitals. Trying to spot patterns in symptoms that change hour to hour. I've lost count of how many times we've told her story from the beginning to a new doctor.
+          </p>
+
+          <p class="text-lg text-walnut leading-relaxed">
+            It helped having me there, but I'm not the one who's ill. Annie needed a way to track things herself. Something simple enough to use on bad days. Something that didn't need her to type or navigate menus when her hands aren't working.
+          </p>
+
+          <p class="text-xl text-walnut leading-relaxed font-medium">
+            Just talk and be done.
+          </p>
+
+          <p class="text-lg text-walnut leading-relaxed">
+            So I built it for her.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What It Does Section -->
+    <section class="py-16 sm:py-24 bg-mist/40">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-walnut mb-8 text-center">
+          What Annie's Journal does
+        </h2>
+        <div class="space-y-6 text-lg text-walnut leading-relaxed">
+          <p>
+            Annie's Journal lets you check in by voice. It picks out the symptoms, tracks them over time, and gives you something useful to bring to your next appointment.
+          </p>
+          <p class="text-walnut-muted">
+            No forms to fill in. No complicated menus. Just say how you're feeling, and we'll handle the rest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-walnut mb-6">
+          Open source, privacy-first
+        </h2>
+        <p class="text-lg text-walnut-muted leading-relaxed mb-8">
+          Annie's Journal is open source under the AGPL-3.0 license. Your health data belongs to you. We don't sell it, we don't analyze it for advertising, and you can export or delete it whenever you want.
+        </p>
+        <a
+          href="https://github.com/lawrab/annies-health-journal"
+          class="btn-secondary inline-flex items-center gap-2"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section class="py-16 sm:py-24 bg-gradient-to-b from-cream to-cream-dark">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-xl sm:text-2xl text-walnut leading-relaxed mb-8">
+          I made it for Annie. But if you're going through something similar, maybe it'll help you too.
+        </p>
+        <a
+          href="https://app.anniesjournal.com"
+          class="btn-cta text-lg px-8 py-4"
+        >
+          Start Your Journal
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

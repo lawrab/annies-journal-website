@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="How It Works - Annie's Journal"
+  description="Learn how Annie's Journal helps you track symptoms with voice, spot patterns, and prepare for doctor appointments."
+>
+  <Header />
+
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-cream to-cream-dark">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <div class="text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold text-walnut leading-tight">
+            Just talk. We'll handle the rest.
+          </h1>
+          <p class="mt-6 text-xl text-walnut-muted max-w-2xl mx-auto leading-relaxed">
+            No complicated setup. No learning curve. Start tracking your symptoms in under a minute.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 1 -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-white">1</span>
+              </div>
+              <h2 class="text-3xl font-bold text-walnut">Check in with your voice</h2>
+            </div>
+            <p class="text-lg text-walnut-muted leading-relaxed mb-6">
+              Open the app and tap the record button. Then just talk naturally about how you're feeling today.
+            </p>
+            <div class="bg-mist/40 rounded-xl p-6">
+              <p class="text-walnut italic leading-relaxed">
+                "Woke up around 3am with that sharp pain in my shoulder again. Took some ibuprofen, went back to sleep. Feeling pretty tired this morning. Hands are stiff but not as bad as yesterday. Maybe a 4 out of 10 today..."
+              </p>
+            </div>
+            <p class="mt-6 text-walnut-muted">
+              Talk for as long or as short as you want. There's no right or wrong way to describe how you feel.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <div class="relative">
+              <div class="w-64 h-96 bg-walnut/5 rounded-3xl p-4 border border-rose/30">
+                <div class="bg-cream rounded-2xl h-full flex flex-col items-center justify-center p-6">
+                  <p class="text-sm text-walnut-muted mb-8">Tap to start</p>
+                  <div class="w-24 h-24 bg-terracotta rounded-full flex items-center justify-center recording-pulse cursor-pointer">
+                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-walnut-muted mt-8">Takes 30 seconds</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Break -->
+    <section class="py-8 bg-mist/40">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-walnut-muted">
+          Designed for days when typing feels impossible and brain fog makes forms overwhelming.
+        </p>
+      </div>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 flex justify-center">
+            <div class="w-80 bg-white rounded-2xl shadow-card p-6">
+              <p class="text-sm text-walnut-muted mb-4">Extracted from your check-in:</p>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between py-2 border-b border-rose/20">
+                  <span class="text-walnut">Shoulder pain</span>
+                  <span class="text-sm px-2 py-1 bg-terracotta-light/30 rounded text-walnut">Sharp, 3am</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-rose/20">
+                  <span class="text-walnut">Fatigue</span>
+                  <span class="text-sm px-2 py-1 bg-rose/30 rounded text-walnut">Morning</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-rose/20">
+                  <span class="text-walnut">Hand stiffness</span>
+                  <span class="text-sm px-2 py-1 bg-sage-light/50 rounded text-walnut">4/10</span>
+                </div>
+                <div class="flex items-center justify-between py-2">
+                  <span class="text-walnut">Medication</span>
+                  <span class="text-sm text-walnut-muted">Ibuprofen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-white">2</span>
+              </div>
+              <h2 class="text-3xl font-bold text-walnut">We pick out the details</h2>
+            </div>
+            <p class="text-lg text-walnut-muted leading-relaxed mb-6">
+              Annie's Journal automatically identifies symptoms, severity, timing, and medications from what you said. No manual tagging needed.
+            </p>
+            <p class="text-lg text-walnut leading-relaxed">
+              You can review and adjust anything we got wrong, but most people find they can just check in and move on with their day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3 -->
+    <section class="py-16 sm:py-24 bg-mist/40">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-white">3</span>
+              </div>
+              <h2 class="text-3xl font-bold text-walnut">Watch patterns emerge</h2>
+            </div>
+            <p class="text-lg text-walnut-muted leading-relaxed mb-6">
+              Over time, your check-ins build into a clear picture of your health. See which symptoms come together, what makes things better or worse, and how you're changing week to week.
+            </p>
+            <p class="text-lg text-walnut leading-relaxed">
+              The patterns that are invisible day-to-day become obvious when you can see the whole timeline.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <div class="w-80 bg-white rounded-2xl shadow-card p-6">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-medium text-walnut">Last 4 weeks</span>
+                <span class="text-sm text-sage">Improving</span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-sm text-walnut">Hand stiffness</span>
+                    <span class="text-xs text-sage">-23%</span>
+                  </div>
+                  <div class="h-2 bg-rose/20 rounded-full">
+                    <div class="h-2 bg-sage rounded-full w-3/4"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-sm text-walnut">Fatigue</span>
+                    <span class="text-xs text-walnut-muted">No change</span>
+                  </div>
+                  <div class="h-2 bg-rose/20 rounded-full">
+                    <div class="h-2 bg-honey-light rounded-full w-1/2"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-sm text-walnut">Sleep quality</span>
+                    <span class="text-xs text-sage">+15%</span>
+                  </div>
+                  <div class="h-2 bg-rose/20 rounded-full">
+                    <div class="h-2 bg-sage rounded-full w-4/5"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 pt-4 border-t border-rose/20">
+                <p class="text-sm text-walnut-muted">
+                  <span class="text-honey font-medium">Insight:</span> Sleep improvements correlate with reduced morning stiffness
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 4 -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 flex justify-center">
+            <div class="w-80 bg-white rounded-2xl shadow-card p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <svg class="w-6 h-6 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="font-medium text-walnut">Appointment Summary</span>
+              </div>
+              <div class="text-sm space-y-4">
+                <div>
+                  <p class="text-walnut-muted">Period: Nov 1 - Nov 30</p>
+                  <p class="text-walnut">28 check-ins</p>
+                </div>
+                <div>
+                  <p class="text-walnut font-medium mb-1">Primary concerns:</p>
+                  <ul class="text-walnut-muted space-y-1 ml-4">
+                    <li>• Shoulder pain (18 occurrences)</li>
+                    <li>• Morning fatigue (22 occurrences)</li>
+                    <li>• Hand stiffness (15 occurrences)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-walnut font-medium mb-1">Notable patterns:</p>
+                  <p class="text-walnut-muted">Pain worse after poor sleep. Improvement on days with gentle stretching.</p>
+                </div>
+              </div>
+              <button class="mt-4 w-full btn-primary text-sm">
+                Share with Doctor
+              </button>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta rounded-full flex items-center justify-center">
+                <span class="text-xl font-bold text-white">4</span>
+              </div>
+              <h2 class="text-3xl font-bold text-walnut">Walk into appointments prepared</h2>
+            </div>
+            <p class="text-lg text-walnut-muted leading-relaxed mb-6">
+              Before your appointment, generate a summary of everything that's been happening. Share it directly with your doctor or print it out.
+            </p>
+            <p class="text-lg text-walnut leading-relaxed">
+              No more scrambling to remember details. No more feeling like you forgot something important. Your whole story is right there.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Quote -->
+    <section class="py-12 bg-mist/40">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-lg text-walnut leading-relaxed italic">
+          "I've lost count of how many times we've told her story from the beginning to a new doctor."
+        </p>
+        <p class="mt-4 text-walnut-muted">
+          Now you won't have to.
+        </p>
+      </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section class="py-16 sm:py-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-walnut mb-6">
+          Start in under a minute
+        </h2>
+        <p class="text-lg text-walnut-muted leading-relaxed mb-8">
+          No account required to get started. No credit card. No complicated setup. Just open the app and talk.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://app.anniesjournal.com"
+            class="btn-cta text-lg px-8 py-4"
+          >
+            Start Your Journal
+          </a>
+          <a
+            href="/features"
+            class="btn-secondary text-lg px-8 py-4"
+          >
+            See All Features
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

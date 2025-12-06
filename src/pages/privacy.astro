@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Privacy - Annie's Journal"
+  description="Your health data belongs to you. Learn how Annie's Journal protects your privacy."
+>
+  <Header />
+
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-cream to-cream-dark">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <div class="text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold text-walnut leading-tight">
+            Your data belongs to you.
+          </h1>
+          <p class="mt-6 text-xl text-walnut-muted max-w-2xl mx-auto leading-relaxed">
+            Annie's Journal was built for someone tracking sensitive health information. We take that responsibility seriously.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Summary -->
+    <section class="py-16 sm:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-walnut mb-8 text-center">The short version</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="card">
+            <div class="w-12 h-12 bg-sage-light/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-walnut mb-2">We don't sell your data</h3>
+            <p class="text-walnut-muted">
+              Your health information is never sold to advertisers, data brokers, or anyone else. Ever.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="w-12 h-12 bg-sage-light/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-walnut mb-2">Export anytime</h3>
+            <p class="text-walnut-muted">
+              Download all your data whenever you want. It's yours to keep, share, or take elsewhere.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="w-12 h-12 bg-sage-light/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-walnut mb-2">Delete completely</h3>
+            <p class="text-walnut-muted">
+              Request deletion and we'll remove everything. No "we keep it for 7 years" fine print.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="w-12 h-12 bg-sage-light/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-walnut mb-2">Open source</h3>
+            <p class="text-walnut-muted">
+              The code is public. You can see exactly how your data is handled.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Privacy Policy -->
+    <section class="py-16 sm:py-20 bg-mist/40">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-walnut mb-12 text-center">Privacy Policy</h2>
+
+        <div class="space-y-12">
+          <!-- What We Collect -->
+          <div>
+            <h3 class="text-xl font-semibold text-walnut mb-4">What we collect</h3>
+            <div class="prose-walnut space-y-4 text-walnut-muted">
+              <p>When you use Annie's Journal, we store:</p>
+              <ul class="list-disc list-inside space-y-2 ml-4">
+                <li><strong class="text-walnut">Voice recordings</strong> — Your check-in recordings, stored temporarily for transcription</li>
+                <li><strong class="text-walnut">Transcripts</strong> — The text version of what you said</li>
+                <li><strong class="text-walnut">Extracted symptoms</strong> — Symptoms, severity, timing, and other health details we identify</li>
+                <li><strong class="text-walnut">Account info</strong> — Email address if you create an account (optional)</li>
+              </ul>
+              <p class="mt-4">
+                Voice recordings are processed for transcription and then deleted. We don't keep audio files long-term.
+              </p>
+            </div>
+          </div>
+
+          <!-- How We Use It -->
+          <div>
+            <h3 class="text-xl font-semibold text-walnut mb-4">How we use your data</h3>
+            <div class="prose-walnut space-y-4 text-walnut-muted">
+              <p>Your data is used to:</p>
+              <ul class="list-disc list-inside space-y-2 ml-4">
+                <li>Show you your symptom history and patterns</li>
+                <li>Generate appointment summaries</li>
+                <li>Improve symptom recognition accuracy (anonymized, aggregated data only)</li>
+              </ul>
+              <p class="mt-4">
+                We do not use your data for advertising. We do not share it with third parties for marketing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Third Party Services -->
+          <div>
+            <h3 class="text-xl font-semibold text-walnut mb-4">Third-party services</h3>
+            <div class="prose-walnut space-y-4 text-walnut-muted">
+              <p>We use a small number of services to run Annie's Journal:</p>
+              <ul class="list-disc list-inside space-y-2 ml-4">
+                <li><strong class="text-walnut">Transcription services</strong> — To convert your voice recordings to text</li>
+                <li><strong class="text-walnut">AI processing</strong> — To identify symptoms and patterns from transcripts</li>
+                <li><strong class="text-walnut">Hosting infrastructure</strong> — To store and serve your data securely</li>
+              </ul>
+              <p class="mt-4">
+                These services are selected for their privacy practices and are bound by data processing agreements.
+              </p>
+            </div>
+          </div>
+
+          <!-- Your Rights -->
+          <div>
+            <h3 class="text-xl font-semibold text-walnut mb-4">Your rights</h3>
+            <div class="prose-walnut space-y-4 text-walnut-muted">
+              <p>You have the right to:</p>
+              <ul class="list-disc list-inside space-y-2 ml-4">
+                <li><strong class="text-walnut">Access</strong> — See all the data we have about you</li>
+                <li><strong class="text-walnut">Export</strong> — Download your data in a portable format</li>
+                <li><strong class="text-walnut">Delete</strong> — Request complete deletion of your account and data</li>
+                <li><strong class="text-walnut">Correct</strong> — Fix any inaccurate information</li>
+              </ul>
+              <p class="mt-4">
+                To exercise these rights, contact us at privacy@anniesjournal.com or use the settings in the app.
+              </p>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div>
+            <h3 class="text-xl font-semibold text-walnut mb-4">Security</h3>
+            <div class="prose-walnut space-y-4 text-walnut-muted">
+              <p>
+                We use industry-standard security measures to protect your data, including encryption in transit and at rest.
+                However, no system is perfectly secure. We're committed to transparency if any security incident occurs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Changes -->
+          <div>
+            <h3 class="text-xl font-semibold text-walnut mb-4">Changes to this policy</h3>
+            <div class="prose-walnut space-y-4 text-walnut-muted">
+              <p>
+                If we make significant changes to how we handle your data, we'll notify you through the app and update this page.
+                The date at the bottom shows when this policy was last updated.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-xl font-semibold text-walnut mb-4">Questions?</h3>
+            <div class="prose-walnut space-y-4 text-walnut-muted">
+              <p>
+                If you have questions about your privacy or this policy, reach out to us at
+                <a href="mailto:privacy@anniesjournal.com" class="text-sage hover:underline">privacy@anniesjournal.com</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-rose/30 text-center">
+          <p class="text-sm text-walnut-muted">
+            Last updated: December 2024
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Source Note -->
+    <section class="py-16 sm:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl font-bold text-walnut mb-4">
+          Don't take our word for it
+        </h2>
+        <p class="text-lg text-walnut-muted leading-relaxed mb-8">
+          Annie's Journal is open source. You can read the code yourself and see exactly how your data is collected, stored, and used.
+        </p>
+        <a
+          href="https://github.com/lawrab/annies-health-journal"
+          class="btn-secondary inline-flex items-center gap-2"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+          View Source Code
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
