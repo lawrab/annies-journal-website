@@ -6,12 +6,12 @@ const navLinks = [
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+<header class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-rose/30">
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2">
-        <span class="text-xl font-bold text-primary-600">Annie's Journal</span>
+      <a href="/" class="flex items-center gap-2 text-walnut hover:text-walnut">
+        <span class="text-xl font-bold font-serif">Annie's Journal</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -19,7 +19,7 @@ const navLinks = [
         {navLinks.map(link => (
           <a
             href={link.href}
-            class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+            class="text-walnut-muted hover:text-sage font-medium transition-colors"
           >
             {link.label}
           </a>
@@ -30,7 +30,7 @@ const navLinks = [
       <div class="flex items-center gap-4">
         <a
           href="https://app.anniesjournal.com"
-          class="hidden sm:inline-flex px-4 py-2 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors"
+          class="hidden sm:inline-flex btn-primary text-sm py-2 px-4"
         >
           Open App
         </a>
@@ -38,7 +38,7 @@ const navLinks = [
         <!-- Mobile Menu Button -->
         <button
           type="button"
-          class="md:hidden p-2 text-gray-600 hover:text-primary-600"
+          class="md:hidden p-2 text-walnut-muted hover:text-sage rounded-lg transition-colors"
           aria-label="Open menu"
           id="mobile-menu-button"
         >
@@ -51,19 +51,19 @@ const navLinks = [
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+  <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-rose/30">
     <div class="px-4 py-4 space-y-3">
       {navLinks.map(link => (
         <a
           href={link.href}
-          class="block text-gray-600 hover:text-primary-600 font-medium py-2"
+          class="block text-walnut-muted hover:text-sage font-medium py-2 transition-colors"
         >
           {link.label}
         </a>
       ))}
       <a
         href="https://app.anniesjournal.com"
-        class="block w-full text-center px-4 py-2 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors"
+        class="block w-full text-center btn-primary"
       >
         Open App
       </a>

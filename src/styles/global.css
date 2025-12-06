@@ -1,41 +1,265 @@
 @import "tailwindcss";
 
-/* Custom CSS variables for brand colors */
+/* =============================================================================
+   SOFT DAWN DESIGN SYSTEM
+   Annie's Journal - "The quiet moment of a new morning"
+
+   All color combinations meet WCAG AA standards (4.5:1 for text, 3:1 for UI)
+   Reference: docs/soft-dawn-design-brief.md
+   ============================================================================= */
+
 @theme {
-  --color-primary-50: #eef2ff;
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
-  --color-primary-400: #818cf8;
-  --color-primary-500: #6366f1;
-  --color-primary-600: #4f46e5;
-  --color-primary-700: #4338ca;
-  --color-primary-800: #3730a3;
-  --color-primary-900: #312e81;
-  --color-primary-950: #1e1b4b;
+  /* ---------------------------------------------------------------------------
+     PRIMARY COLORS
+     --------------------------------------------------------------------------- */
 
-  --color-secondary-50: #f0fdfa;
-  --color-secondary-100: #ccfbf1;
-  --color-secondary-200: #99f6e4;
-  --color-secondary-300: #5eead4;
-  --color-secondary-400: #2dd4bf;
-  --color-secondary-500: #14b8a6;
-  --color-secondary-600: #0d9488;
-  --color-secondary-700: #0f766e;
-  --color-secondary-800: #115e59;
-  --color-secondary-900: #134e4a;
-  --color-secondary-950: #042f2e;
+  /* Warm Cream - Main background, warm paper feel */
+  --color-cream: #FDF8F3;
+  --color-cream-dark: #F5EBE6; /* Gentle blush for gradients */
 
-  --font-sans: 'Inter', system-ui, sans-serif;
+  /* Blush Rose - Primary accent, buttons, highlights */
+  --color-rose: #E8C4B8;
+  --color-rose-hover: #DFBAA8;
+
+  /* Deep Sage - Links, interactive elements (6.0:1 on cream) */
+  --color-sage: #4A6741;
+  --color-sage-light: #B5C4B1; /* Decorative only */
+
+  /* ---------------------------------------------------------------------------
+     TEXT COLORS
+     --------------------------------------------------------------------------- */
+
+  /* Deep Walnut - Body text (11.2:1 on cream - AAA) */
+  --color-walnut: #3D3631;
+
+  /* Muted Walnut - Secondary text (5.6:1 on cream - AA) */
+  --color-walnut-muted: #6B635C;
+
+  /* ---------------------------------------------------------------------------
+     ACCENT & UI COLORS
+     --------------------------------------------------------------------------- */
+
+  /* Deep Terracotta - CTA buttons (4.9:1 with white - AA) */
+  --color-terracotta: #A65D45;
+  --color-terracotta-hover: #954F3A;
+  --color-terracotta-light: #C4836A; /* Decorative only */
+
+  /* Morning Mist - Card backgrounds, dividers */
+  --color-mist: #E5E1EC;
+
+  /* Deep Honey - Warnings, pattern insights (5.2:1 on cream - AA) */
+  --color-honey: #8B6914;
+  --color-honey-light: #D4A574; /* Decorative only */
+
+  /* Living Coral - Recording animation (decorative only) */
+  --color-coral: #E07A5F;
+
+  /* ---------------------------------------------------------------------------
+     SEMANTIC ALIASES
+     For clearer intent in component styling
+     --------------------------------------------------------------------------- */
+
+  --color-background: #FDF8F3;
+  --color-background-alt: #E5E1EC;
+  --color-text-primary: #3D3631;
+  --color-text-secondary: #6B635C;
+  --color-link: #4A6741;
+  --color-button-primary: #E8C4B8;
+  --color-button-cta: #A65D45;
+
+  /* ---------------------------------------------------------------------------
+     TYPOGRAPHY
+     --------------------------------------------------------------------------- */
+
+  /* Literata - Headlines, journal/book feel */
+  --font-serif: 'Literata', 'Georgia', serif;
+
+  /* Inter - Body text, humanist sans-serif */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Caveat - Optional accent for taglines/quotes (use sparingly) */
+  --font-accent: 'Caveat', cursive;
+
+  /* ---------------------------------------------------------------------------
+     SPACING & RADII
+     Organic, soft shapes - not mechanical
+     --------------------------------------------------------------------------- */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+
+  /* ---------------------------------------------------------------------------
+     SHADOWS
+     Soft, natural light feel - not harsh drop shadows
+     --------------------------------------------------------------------------- */
+
+  --shadow-soft: 0 2px 8px rgba(61, 54, 49, 0.06);
+  --shadow-card: 0 4px 16px rgba(61, 54, 49, 0.08);
+  --shadow-lifted: 0 8px 24px rgba(61, 54, 49, 0.10);
 }
 
-/* Base styles */
+/* =============================================================================
+   BASE STYLES
+   ============================================================================= */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-walnut);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use serif font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Links default to Deep Sage */
+a {
+  color: var(--color-sage);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-walnut);
+}
+
+/* =============================================================================
+   COMPONENT UTILITIES
+   Reusable patterns following the design brief
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   BUTTONS
+   --------------------------------------------------------------------------- */
+
+/* Primary Button - Blush Rose background, Deep Walnut text */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--color-rose);
+  color: var(--color-walnut);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-rose-hover);
+  color: var(--color-walnut);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-1px);
+}
+
+/* CTA Button - Deep Terracotta background, white text */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--color-terracotta);
+  color: white;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--color-terracotta-hover);
+  color: white;
+  box-shadow: var(--shadow-card);
+  transform: translateY(-1px);
+}
+
+/* Secondary/Ghost Button */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--color-walnut);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border: 1.5px solid var(--color-rose);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-rose);
+  color: var(--color-walnut);
+}
+
+/* ---------------------------------------------------------------------------
+   CARDS
+   --------------------------------------------------------------------------- */
+
+.card {
+  background-color: white;
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.card-mist {
+  background-color: var(--color-mist);
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ---------------------------------------------------------------------------
+   SUBTLE PAPER TEXTURE
+   Optional: adds tactile, non-digital feel
+   --------------------------------------------------------------------------- */
+
+.paper-texture {
+  position: relative;
+}
+
+.paper-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------------------------
+   RECORDING PULSE ANIMATION
+   Living Coral decorative animation for voice recording
+   --------------------------------------------------------------------------- */
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.recording-pulse {
+  animation: pulse-gentle 2s ease-in-out infinite;
+  background-color: var(--color-coral);
 }
